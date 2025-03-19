@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate OTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .container input{
+            width: 92%;
+        }
+        input,button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        #otp-display {
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <h2>OTP LOGIN PAGE</h2>
+            <form action="">
+                <input type="text" placeholder="Enter Full Name">
+                <input type="email" placeholder="Enter Email Id">
+                <input type="number" placeholder="Enter Phone Number">
+                <input type="number" placeholder="Enter the OTP">
+                <button>Submit</button>
+            </form>
+            <button onclick="generateOTP()">Generate OTP</button>
+            <p>Your OTP: <span id="otp-display">-</span></p>
+        </div>
+    <script>
+        function generateOTP() {
+            // Generate 6-digit OTP
+            let otp = Math.floor(10 + Math.random() * 90);
+            document.getElementById("otp-display").innerText = otp;
+
+            // var otp="";
+            // for (let i=0;i<4;i++){
+            //     otp=otp+math.floor(math.random()*10);
+            // }
+            // .one.innerHTML='your OTP is:${otp}';
+
+        }
+    </script>
+</body>
+</html>
