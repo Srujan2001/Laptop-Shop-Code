@@ -1,0 +1,261 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: var(--bg-color, #f5f5f5);
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header h1 {
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 0.5rem;
+}
+
+.points {
+  color: var(--text-secondary, #555);
+  font-size: 1.1rem;
+}
+
+.points strong {
+  color: #f39c12;
+  font-size: 1.3rem;
+}
+
+.postBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.postBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color, #ddd);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--input-bg, #fff);
+  color: var(--text-primary, #2c3e50);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.categoryFilter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.categoryFilter label {
+  color: var(--text-primary, #2c3e50);
+  font-weight: 500;
+}
+
+.select {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color, #ddd);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--input-bg, #fff);
+  color: var(--text-primary, #2c3e50);
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background-color: var(--card-bg, #fff);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.statCard h3 {
+  color: var(--text-secondary, #555);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.statNumber {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-primary, #2c3e50);
+  margin: 0;
+}
+
+.itemsSection {
+  margin-top: 2rem;
+}
+
+.itemsSection h2 {
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 1.5rem;
+}
+
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.itemCard {
+  background-color: var(--card-bg, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.itemCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--image-bg, #f0f0f0);
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.itemContent {
+  padding: 1.5rem;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.itemHeader h3 {
+  color: var(--text-primary, #2c3e50);
+  margin: 0;
+  flex: 1;
+}
+
+.category {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.description {
+  color: var(--text-secondary, #555);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail {
+  color: var(--text-primary, #2c3e50);
+  font-size: 0.9rem;
+}
+
+.itemFooter {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color, #eee);
+}
+
+.itemFooter small {
+  color: var(--text-secondary, #999);
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--card-bg, #fff);
+  border-radius: 12px;
+  color: var(--text-secondary, #555);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .itemsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --card-bg: #2a2a2a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #444;
+  --input-bg: #333;
+  --image-bg: #333;
+}
+

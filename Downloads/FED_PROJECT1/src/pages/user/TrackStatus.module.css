@@ -1,0 +1,254 @@
+.trackStatus {
+  min-height: 100vh;
+  background-color: var(--bg-color, #f5f5f5);
+}
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.main h1 {
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary, #555);
+  margin-bottom: 2rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--card-bg, #fff);
+  border-radius: 12px;
+  color: var(--text-secondary, #555);
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.itemCard {
+  background-color: var(--card-bg, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--header-bg, #f8f9fa);
+  border-bottom: 1px solid var(--border-color, #eee);
+}
+
+.statusBadge {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.pendingBadge {
+  background-color: #f39c12;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--image-bg, #f0f0f0);
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.itemContent {
+  padding: 1.5rem;
+}
+
+.itemContent h3 {
+  color: var(--text-primary, #2c3e50);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: var(--text-secondary, #555);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--details-bg, #f8f9fa);
+  border-radius: 8px;
+}
+
+.detail {
+  color: var(--text-primary, #2c3e50);
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color, #eee);
+}
+
+.editBtn,
+.deleteBtn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.editBtn {
+  background-color: #3498db;
+  color: white;
+}
+
+.editBtn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.deleteBtn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.editInput,
+.editTextarea {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color, #ddd);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--input-bg, #fff);
+  color: var(--text-primary, #2c3e50);
+}
+
+.editInput:focus,
+.editTextarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.editRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.editActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.saveBtn,
+.cancelBtn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.saveBtn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.saveBtn:hover {
+  background-color: #229954;
+}
+
+.cancelBtn {
+  background-color: var(--cancel-bg, #95a5a6);
+  color: white;
+}
+
+.cancelBtn:hover {
+  background-color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+  .itemHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+  .editRow {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --card-bg: #2a2a2a;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --border-color: #444;
+  --header-bg: #333;
+  --image-bg: #333;
+  --details-bg: #333;
+  --input-bg: #333;
+  --cancel-bg: #555;
+}
+

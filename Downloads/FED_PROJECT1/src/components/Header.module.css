@@ -1,0 +1,122 @@
+.header {
+  background-color: var(--header-bg, #2c3e50);
+  color: var(--header-text, #fff);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--header-text, #fff);
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--header-text, #fff);
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.themeToggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 1rem;
+}
+
+.points {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.logoutBtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.logoutBtn:hover {
+  background-color: #c0392b;
+}
+
+.adminLoginBtn {
+  background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+  color: white;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.adminLoginBtn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .userInfo {
+    margin-left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+[data-theme="dark"] .header {
+  --header-bg: #1a1a1a;
+  --header-text: #e0e0e0;
+}
+
